@@ -12,7 +12,7 @@ const defaultOptions: DefaultOptions = {
     errorPolicy: 'all',
   },
 }
-const uri = 'https://cosmosgraphqlservice20210713122015.azurewebsites.net/graphql/'; // <-- add the URL of the DAB
+const uri = 'const uri = 'https://dab-cosmos-demo.azurewebsites.net/graphql/'; // <-- add the URL of the DAB
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   return {
     link: httpLink.create({uri}),
