@@ -30,7 +30,7 @@ jobs:
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
           data_api_location: "data-api"
-          output_location: "" # Built app content directory - optional
+          output_location: "dist/wonderApp" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
