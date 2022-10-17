@@ -1,27 +1,26 @@
 {
-  "$schema": "dab.draft-01.schema.json",
+  "$schema": "../schemas/hawaii.draft-01.schema.json",
   "data-source": {
     "database-type": "cosmos",
     "connection-string": ""
   },
   "cosmos": {
-    "database": "PlaygroundDB",
+    "database": "dab-cosmos-demo",
     "schema": "schema.gql"
   },
   "runtime": {
     "rest": {
-      "enabled": false,
-      "path": "/api"
+      "enabled": false
     },
     "graphql": {
-      "allow-introspection": true,
       "enabled": true,
-      "path": "/graphql"
+      "path": "/graphql",
+      "allow-introspection": true
     },
     "host": {
       "mode": "development",
       "cors": {
-        "origins": [],
+        "origins": [ "http://localhost:5000","https://localhost:4200","http://localhost:4200" ],
         "allow-credentials": false
       },
       "authentication": {
@@ -30,28 +29,16 @@
     }
   },
   "entities": {
-    "Author": {
-      "source": "authors",
+    "Wonder": {
+      "source": "dab-cosmos-demo.wonders",
       "rest": false,
       "graphql": true,
       "permissions": [
         {
           "role": "anonymous",
-          "actions": [ "*" ]
-        }
-      ]
-    },
-    "Book": {
-      "source": "books",
-      "rest": false,
-      "graphql": true,
-      "permissions": [
-        {
-          "role": "anonymous",
-          "actions": [ "*" ]
+          "actions": [ "create", "read", "update", "delete" ]
         }
       ]
     }
   }
-
 }
