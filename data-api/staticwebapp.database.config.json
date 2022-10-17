@@ -1,0 +1,57 @@
+{
+  "$schema": "dab.draft-01.schema.json",
+  "data-source": {
+    "database-type": "cosmos",
+    "connection-string": ""
+  },
+  "cosmos": {
+    "database": "PlaygroundDB",
+    "schema": "schema.gql"
+  },
+  "runtime": {
+    "rest": {
+      "enabled": false,
+      "path": "/api"
+    },
+    "graphql": {
+      "allow-introspection": true,
+      "enabled": true,
+      "path": "/graphql"
+    },
+    "host": {
+      "mode": "development",
+      "cors": {
+        "origins": [],
+        "allow-credentials": false
+      },
+      "authentication": {
+        "provider": "StaticWebApps"
+      }
+    }
+  },
+  "entities": {
+    "Author": {
+      "source": "authors",
+      "rest": false,
+      "graphql": true,
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [ "*" ]
+        }
+      ]
+    },
+    "Book": {
+      "source": "books",
+      "rest": false,
+      "graphql": true,
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [ "*" ]
+        }
+      ]
+    }
+  }
+
+}
