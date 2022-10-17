@@ -1,13 +1,14 @@
-type Author @model {
+type Wonder @model {
     id : ID,
-    first_name : String,
-    middle_name: String,
-    last_name: String,
-    Books: [Book]
+    name : String,
+    type : String,
+    latitude : String,
+    longitude : String,
+    country : String,
+    location : String,
+    wikipedia_link : String,
+    picture_link : String,
+    build_in_year : String
 }
 
-type Book @model {
-    id : ID,
-    title : String,
-    Authors: [String]
-}
+ 
