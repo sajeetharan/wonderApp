@@ -2,9 +2,8 @@
   "$schema": "../schemas/hawaii.draft-01.schema.json",
   "data-source": {
     "database-type": "cosmosdb_nosql",
-    "connection-string": "",
     "options": {
-      "database": "dab-cosmos-demo",
+      "database": "mydb",
       "container":"wonders",
       "schema": "schema.gql"
     }
@@ -31,7 +30,7 @@
   },
   "entities": {
     "Wonder": {
-      "source": "dab-cosmos-demo.wonders",
+      "source": "mydb.wonders",
       "rest": false,
       "graphql": true,
       "permissions": [
