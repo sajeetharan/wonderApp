@@ -7,7 +7,7 @@
       "database": "dab-cosmos-demo",
       "container":"wonders",
       "schema": "schema.gql"
-    },
+    }
   },
   "runtime": {
     "rest": {
