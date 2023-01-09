@@ -5,6 +5,7 @@
     "connection-string": "",
     "options": {
       "database": "dab-cosmos-demo",
+      "container":"wonders",
       "schema": "schema.gql"
     },
   },
