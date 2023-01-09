@@ -3,7 +3,7 @@
   "data-source": {
     "database-type": "cosmosdb_nosql",
     "options": {
-      "database": "mydb",
+      "database": "dab-cosmos-demo",
       "container":"wonders",
       "schema": "schema.gql"
     }
@@ -30,7 +30,7 @@
   },
   "entities": {
     "Wonder": {
-      "source": "mydb.wonders",
+      "source": "dab-cosmos-demo.wonders",
       "rest": false,
       "graphql": true,
       "permissions": [
