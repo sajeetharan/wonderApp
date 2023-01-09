@@ -1,12 +1,12 @@
 {
   "$schema": "../schemas/hawaii.draft-01.schema.json",
   "data-source": {
-    "database-type": "cosmos",
-    "connection-string": ""
-  },
-  "cosmos": {
-    "database": "dab-cosmos-demo",
-    "schema": "schema.gql"
+    "database-type": "cosmosdb_nosql",
+    "connection-string": "",
+    "options": {
+      "database": "dab-cosmos-demo",
+      "schema": "schema.gql"
+    },
   },
   "runtime": {
     "rest": {
