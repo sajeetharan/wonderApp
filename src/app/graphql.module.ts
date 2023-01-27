@@ -12,7 +12,7 @@ const defaultOptions: DefaultOptions = {
     errorPolicy: 'all',
   },
 }
-const uri = 'https://zealous-tree-0b6736615.azurestaticappsbeta.net/data-api/graphql'; // <-- add the URL of the DAB
+const uri = 'https://purple-cliff-02c39bb10.2.azurestaticapps.net/data-api/graphql'; // <-- add the URL of the DAB
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   return {
     link: httpLink.create({uri}),
